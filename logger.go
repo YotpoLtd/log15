@@ -107,7 +107,7 @@ func (l *logger) write(msg string, lvl Lvl, ctx []interface{}) {
 			Lvl:  lvlKey,
 		},
 	}
-	runtime.Callers(3, r.CallPC[:])
+	runtime.Callers(4, r.CallPC[:])
 	l.h.Log(&r)
 }
 
